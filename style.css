@@ -1,0 +1,758 @@
+ @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
+
+                :root {
+                --bg: #000000;
+                --clr-1: #00c2ff;
+                --clr-2: #33ff8c;
+                --clr-3: #ffc640;
+                --clr-4: #e54cff;
+                --blur: 1rem;
+                --fs: clamp(1rem, 5vw, 5rem);
+                --ls: clamp(-1.75px, -0.25vw,
+                -3.5px);
+                }
+
+.content {
+  min-height: 20vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--bg);
+  color: #fff;
+  font-family: "Inter", "DM Sans", Arial, sans-serif;
+} 
+
+*,
+*::before,
+*::after {
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: var(--fs);
+  font-weight: 600;
+  letter-spacing: var(--ls);
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+  margin: 0;
+}
+
+.subtitle {
+}
+
+                .aurora {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                mix-blend-mode: darken;
+                pointer-events: none;
+                }
+
+.aurora__item {
+  overflow: hidden;
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  background-color: var(--clr-1);
+  border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+  filter: blur(var(--blur));
+  mix-blend-mode: overlay;
+}
+
+.aurora__item:nth-of-type(1) {
+  top: -50%;
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-1 5s ease-in-out infinite alternate;
+}
+
+.aurora__item:nth-of-type(2) {
+  background-color: var(--clr-3);
+  right: 0;
+  top: 0;
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-2 5s ease-in-out infinite alternate;
+}
+
+.aurora__item:nth-of-type(3) {
+  background-color: var(--clr-2);
+  left: 0;
+  bottom: 0;
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-3 3s ease-in-out infinite alternate;
+}
+
+.aurora__item:nth-of-type(4) {
+  background-color: var(--clr-4);
+  right: 0;
+  bottom: -50%;
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-4 13s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-1 {
+  0% {
+    top: 0;
+    right: 0;
+  }
+
+  50% {
+    top: 100%;
+    right: 75%;
+  }
+
+  75% {
+    top: 100%;
+    right: 25%;
+  }
+
+  100% {
+    top: 0;
+    right: 0;
+  }
+}
+
+@keyframes aurora-2 {
+  0% {
+    top: -50%;
+    left: 0%;
+  }
+
+  60% {
+    top: 100%;
+    left: 75%;
+  }
+
+  85% {
+    top: 100%;
+    left: 25%;
+  }
+
+  100% {
+    top: -50%;
+    left: 0%;
+  }
+}
+
+@keyframes aurora-3 {
+  0% {
+    bottom: 0;
+    left: 0;
+  }
+
+  40% {
+    bottom: 100%;
+    left: 75%;
+  }
+
+  65% {
+    bottom: 40%;
+    left: 50%;
+  }
+
+  100% {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@keyframes aurora-4 {
+  0% {
+    bottom: -50%;
+    right: 0;
+  }
+
+  50% {
+    bottom: 0%;
+    right: 40%;
+  }
+
+  90% {
+    bottom: 50%;
+    right: 25%;
+  }
+
+  100% {
+    bottom: -50%;
+    right: 0;
+  }
+}
+
+@keyframes aurora-border {
+  0% {
+    border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+  }
+
+  25% {
+    border-radius: 47% 29% 39% 49% / 61% 19% 66% 26%;
+  }
+
+  50% {
+    border-radius: 57% 23% 47% 72% / 63% 17% 66% 33%;
+  }
+
+  75% {
+    border-radius: 28% 49% 29% 100% / 93% 20% 64% 25%;
+  }
+
+  100% {
+    border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+  }
+} 
+
+                                                          /* Login ends  */
+/* 
+ body {
+
+background-color:green;
+
+    } */
+      /* background color on the sweethouse page  start*/
+    .popular-sweets {
+        background-color: #FFFFC2; 
+        padding: 20px; 
+        border-radius: 10px; 
+      }
+ /* background color on the sweethouse page  end*/
+
+  /* background color on the Namkeen page  start*/
+  .popular-savories {
+    background-color: rgb(37, 37, 61); 
+    padding: 20px; 
+    border-radius: 10px; 
+  }
+  /* background color on the Namkeen page  end*/
+
+    .navbar {
+        width: 100%;
+        position: absolute;
+        margin-top: 0px;
+        background-color: cadetblue;
+    }
+
+    .navbar-nav {
+        list-style-type: none;
+
+    }
+
+    .nav-item {
+        float: left;
+        margin-top: -12px;
+        /* margin-right: -12px; */
+    }
+
+    .nav-item a {
+        display: block;
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+        margin-left: 10px;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /* Change the link color on hover */
+    .nav-item a:hover {
+        background-color: red;
+        color: white;
+    }
+
+    .active {
+        background-color: red;
+        color: white;
+    }
+
+    /* start slider css coding */
+    .mySlides {
+        display: none;
+    }
+
+    .carousel {
+        padding-top: 116px;
+    }
+
+    /* end slider css coding */
+    /*start css section coding*/
+    .popular-sweets,
+    .popular-savories,
+    popular-biscuits,
+    .popular-dry-food,
+    .popular-minute-khana {
+        padding-top: 0px;
+    }
+
+    .popular-sweets-header,
+    .popular-savories-header,
+    .popular-dry-food-header,
+    .popular-biscuits-header,
+    .popular-minute-khana-header {
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .img-box-container {
+        display: flex;
+        padding: 50px 80px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .img-box {
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 10px #ddd;
+        width: 20%;
+        padding: 10px;
+        margin: 10px;
+        padding-top: 10px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 20px;
+    }
+    .img-h,
+    .img-price {
+        text-align: center;
+        color: deeppink;
+        font-family: sans-serif;
+        line-height: 5px;
+    }
+
+    .img-btn {
+        width: 100px;
+        height: 40px;
+        color: white;
+        font-size:15px;
+        border: none;
+        border-radius: 5px;
+        font-family: sans-serif;
+        box-shadow: none;
+        background-color: #F45AAD;
+        outline: none;
+    }
+
+    .img-btn:hover {
+        background-color: deeppink;
+        cursor: pointer;
+    }
+
+    /*extra btn coding*/
+
+
+    /* start service coding */
+    .service-container {
+        width: 100%;
+        height: 120px;
+        text-align: center;
+    }
+
+    .payment,
+    .delivary,
+    .track {
+        width: 33%;
+        height: 120px;
+        float: left;
+        color: gray;
+    }
+
+    /*end service coding*/
+    /*start footer coding*/
+
+    .footer {
+        width: 100%;
+        height: 220px;
+        background-color: black;
+    }
+
+    .first-footer,
+    .second-footer,
+    .third-footer,
+    .fourth-footer {
+        width: 24%;
+        height: 220px;
+        float: left;
+        line-height: 25px;
+        color: gray;
+    }
+ .icon-box{
+  color: #e54cff;
+ }
+    .icon-box i:hover {
+        color: white;
+        cursor: pointer;
+    }
+
+    .second-footer i:hover {
+        color: white;
+        cursor: pointer;
+    }
+
+    .third-footer i:hover {
+        color: white;
+        cursor: pointer;
+    }
+
+    .powerby {
+        width: 100%;
+        height: 60px;
+        padding-top: 10px;
+        margin-bottom: 0;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    /* body .head{
+        background-color: #F45AAD;
+    }
+    .heading{
+    text-align: center;
+    padding:0;
+    margin: 0;
+    /* background-color: gray; */
+    /* margin-top: 0; */
+    /* padding-top: 0; */
+    /* background-image: url(./Images/sweetbkg.avif); */
+   
+   
+/* } */ 
+/* Styling for .heading */
+.heading {
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    background-image: url(./Images/sweetbkg.avif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    color: #fff; /* Set heading color to white */
+}
+
+/* Styling for the body to set background color */
+body {
+    /* background-color: #d3c6c6; Set the background color for the body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Styling for h1 inside .heading */
+.heading h1 {
+    font-size: 50px; /* Adjust heading font size */
+}
+
+
+    /*end footer coding */    
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    .logo-content {
+        float: left;
+    }
+
+    .logo-content img {
+        width: 250px;
+    }
+
+    .address-content {
+        float: right;
+        padding-right: 20px;
+        padding-top: 10px;
+
+    }
+
+    .navbar {
+        width: 100%;
+        position: absolute;
+        margin-top: 0px;
+        background-color: cadetblue;
+    }
+
+    .navbar-nav {
+        list-style-type: none;
+
+    }
+
+    .nav-item {
+        float: left;
+        margin-top: -12px;
+        /* margin-right: -12px; */
+    }
+
+    .nav-item a {
+        display: block;
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+        margin-left: 10px;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /* Change the link color on hover */
+    .nav-item a:hover {
+        background-color: red;
+        color: white;
+    }
+
+    .active {
+        background-color: red;
+        color: white;
+    }
+
+    /* start slider css coding */
+    .mySlides {
+        display: none;
+    }
+
+    .carousel {
+        padding-top: 116px;
+    }
+
+    /* end slider css coding */
+    /*start css section coding*/
+    .popular-sweets,
+    .popular-savories,
+    popular-biscuits,
+    .popular-dry-food,
+    .popular-minute-khana {
+        padding-top: 0px;
+    }
+
+    .popular-sweets-header,
+    .popular-savories-header,
+    .popular-dry-food-header,
+    .popular-biscuits-header,
+    .popular-minute-khana-header {
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .img-box-container {
+        display: flex;
+        padding: 40px 80px;
+        flex-wrap: wrap;
+        /* justify-content: space-between; */
+
+    }
+
+    .img-box {
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 10px #ddd;
+        width: 20%;
+        padding: 10px;
+        margin: 10px;
+        padding-top: 10px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+  
+    .img-h,
+    .img-price {
+        text-align: center;
+        color: deeppink;
+        font-family: sans-serif;
+        line-height: 5px;
+    }
+
+    .img-btn {
+        width: 100px;
+        height: 40px;
+        color: white;
+        font-size:15px;
+        border: none;
+        border-radius: 5px;
+        font-family: sans-serif;
+        box-shadow: none;
+        background-color: #F45AAD;
+        outline: none;
+    }
+
+    .img-btn:hover {
+        background-color: deeppink;
+        cursor: pointer;
+    }
+
+    /*extra btn coding*/
+
+
+    /* start service coding */
+    .service-container {
+        width: 100%;
+        height: 120px;
+        text-align: center;
+    }
+
+    .payment,
+    .delivary,
+    .track {
+        width: 33%;
+        height: 120px;
+        float: left;
+        color: gray;
+    }
+
+    /*end service coding*/
+    /*start footer coding*/
+
+    .footer {
+        width: 100%;
+        height: 220px;
+        background-color: black;
+    }
+
+    .first-footer,
+    .second-footer,
+    .third-footer,
+    .fourth-footer {
+        width: 24%;
+        height: 220px;
+        float: left;
+        line-height: 25px;
+        color: gray;
+    }
+
+    .icon-box i:hover {
+        color: white;
+        cursor: pointer;
+    }
+
+    .second-footer i:hover {
+        color: white;
+        cursor: pointer;
+    }
+
+    .third-footer i:hover {
+        color: white;
+        cursor: pointer;
+    }
+
+    .powerby {
+        width: 100%;
+        height: 60px;
+        padding-top: 10px;
+        margin-bottom: 0;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    /* body .head{
+        background-color: #F45AAD;
+    }
+    .heading{
+    text-align: center;
+    padding:0;
+    margin: 0;
+    /* background-color: gray; */
+    /* margin-top: 0; */
+    /* padding-top: 0; */
+    /* background-image: url(./Images/sweetbkg.avif); */
+   
+   
+/* } */ 
+/* Styling for .heading */
+.heading {
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    background-image: url(./Images/sweetbkg.avif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    color: #fff; /* Set heading color to white */
+}
+
+/* Styling for the body to set background color */
+body {
+    /* background-color: #d3c6c6; Set the background color for the body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Styling for h1 inside .heading */
+.heading h1 {
+    font-size: 50px; /* Adjust heading font size */
+}
+
+
+    /*end footer coding */                                         
+
+
+
+    /* // footer :start */
+
+
+     /* note  */
+    .note_div{
+      background-color: #FFFFC2;
+      text-align: center;
+      color: rgb(19, 120, 192);
+      margin: 10px;
+     font-size: large;
+    }
+    .note_div1{
+      background-color: #fcfc6b;
+      text-align: center;
+      color: tomato;
+      margin: 20px;
+      height: 50px;
+      justify-content: center;
+     /* font-size: large; */
+    }
+    .Paneer_Div {
+      display: inline-block;
+      width: 300px; /* Adjust the width as needed */
+      height: 150px;
+      margin: 50px; /* Add some spacing between the boxes */
+      padding: 5px;
+      background-color: #007BFF; /* Background color */
+      color: #fff; /* Text color */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      font-size: 16px; /* Adjust the font size as needed */
+      text-align: center; /* Center text horizontally */
+      justify-content: center;
+  }
+
+
+
+  .popular-dry-food
+ {
+  color: rgb(91, 70, 18);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+ }
+  
+    /* paneer  */
+    .img-box-container1 {
+      background-color: #d0bdd3;
+      display: flex;
+      padding: 40px 80px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .img-box1 {
+      border: 1px solid #ccc;
+      box-shadow: 0px 0px 10px #ddd;
+      width: 20%;
+      padding: 10px;
+      margin: 10px;
+      padding-top: 10px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    
+    
+    
+   
+    
